@@ -3,15 +3,15 @@ require 'rails_helper'
 RSpec.describe Comment, type: :model do
   before(:all) do
     @user = User.create(
-        name: 'Eternalgratis',
-        photo: 'https://github.com/Eternalgratis/Blog-app',
-        bio: 'I am wonderfully made',
-        posts_counter: 1
+      name: 'Eternalgratis',
+      photo: 'https://github.com/Eternalgratis/Blog-app',
+      bio: 'I am wonderfully made',
+      posts_counter: 1
     )
     @comment = Comment.create(
-     text: 'Programming is life',
-     author_id: @user.id,
-     post_id: 1
+      text: 'Programming is life',
+      author_id: @user.id,
+      post_id: 1
     )
   end
 

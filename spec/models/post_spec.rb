@@ -3,17 +3,17 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   before(:all) do
     @user = User.create(
-        name: 'Eternalgratis',
-        photo: 'https://github.com/Eternalgratis/Blog-app',
-        bio: 'I am wonderfully made',
-        posts_counter: 1
+      name: 'Eternalgratis',
+      photo: 'https://github.com/Eternalgratis/Blog-app',
+      bio: 'I am wonderfully made',
+      posts_counter: 1
     )
     @post = Post.create(
-     title: 'Love conquers all',
-     text: 'Let love lead',
-     comments_counter: 5,
-     likes_counter: 1,
-     author_id: @user.id
+      title: 'Love conquers all',
+      text: 'Let love lead',
+      comments_counter: 5,
+      likes_counter: 1,
+      author_id: @user.id
     )
   end
 
