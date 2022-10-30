@@ -21,10 +21,10 @@
 # first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
 # second_user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
 
-# first_post = Post.create(author: first_user, title: 'Hello', text: 'This is my first post')
-# first_post = Post.create(author: first_user, title: 'Hello', text: 'This is my second post')
-# first_post = Post.create(author: first_user, title: 'Hello', text: 'This is my third post')
-# first_post = Post.create(author: first_user, title: 'Hello', text: 'This is my fourth post')
+# first_post = Post.create(author: 1, title: 'Hello', text: 'This is my first post')
+# first_post = Post.create(author: 2, title: 'Hello', text: 'This is my second post')
+# first_post = Post.create(author: 3, title: 'Hello', text: 'This is my third post')
+# first_post = Post.create(author: 4, title: 'Hello', text: 'This is my fourth post')
 
 # Comment.create(post: first_post, author: second_user, text: 'Hi Tom!' )
 # Comment.create(post: first_post, author: second_user, text: 'Are you done with your project!' )
@@ -32,3 +32,6 @@
 # Comment.create(post: first_post, author: second_user, text: 'Are you available for a call?' )
 # Comment.create(post: first_post, author: second_user, text: 'Are you enjoying ROR?' )
 # Comment.create(post: first_post, author: second_user, text: 'The end!' )
+
+
+# rails generate scaffold User name:string bio:string
