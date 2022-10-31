@@ -3,7 +3,7 @@ class PostsController < ApplicationController
     @post = Post.all
   end
 
-  def show;
+  def show
     # @post = Post.create(params[:id])
   end
 end
