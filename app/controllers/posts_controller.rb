@@ -4,6 +4,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.create(params[:id])
+    # @post = Post.create(params[:id])
   end
 end
