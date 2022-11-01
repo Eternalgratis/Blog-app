@@ -1,1 +1,25 @@
 <p>Here is a list of posts for a given user</p>
+
+<section>
+    <div class= "container">
+        <div class="user-img">
+          <img src="<%= @user.photo %>">
+        </div>
+
+        <div class="details">
+          <h1 class= "user-head"><%= @user.name %></h1>
+          <p class="user-para">Number of posts: <%= @user.posts_counter || 0 %></p>
+    </div>
+
+  <% @user.most_recent_post.each do |post| %>
+    <%= link_to user_post_path(@user, post) do %>
+        <h2>Post: <%= post.id %></h2>
+    <% end %>
+        <p>post description: <span><%= post.text %></span></p>
+      <div>
+      <span>Numbers of comments: <%= post.comments_counter || 0 %></span>
+      <span>Numbers of likes: <%= post.likes_counter || 0 %></span>
+      </div>
+        <% end %>
+    <button>Pagination</button>
+</section>
