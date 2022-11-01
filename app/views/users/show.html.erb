@@ -1,1 +1,36 @@
 <h3>Here is a list of posts for a given user</h3>
+
+<section>
+      <div class= "container">
+        <div class="user-img">
+          <img src="<%= @user.photo %>">
+        </div>
+
+        <div class="details">
+          <h1 class= "user-head"><%= @user.name %></h1>
+          <p class="user-para">Number of posts: <%= @user.posts_counter || 0 %></p>
+          <div class="user-bio">
+          <h3>Bio: </h3>
+          <p><%= @user.bio %></p>
+          </div>
+        </div>
+      </div>
+    <div class="user-post">
+    <% @user.most_recent_post.each do |post| %>
+    <%= link_to user_post_path(@user, post.id) do %>
+    <div class="post-container">
+    <h2>Post: <% post.title %></h2>
+    <p><%= post.text %></p>
+    <div>
+    <span>comments: <%= post.comments_counter || 0 %></span>
+    <span>likes: <%= post.likes_counter || 0 %></span>
+    </div>
+    <div>
+    <% end %>
+    <% end %>
+    <div>
+
+    <button><%= link_to "See all posts", user_posts_path(@user) %></button>
+</section>
+
+

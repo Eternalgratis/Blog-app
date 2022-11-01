@@ -1,1 +1,20 @@
 <h6>Here is a list of posts for a given user</h6>
+
+<section>
+<div>
+<h1><%= @post.title %></h1>
+<div>
+  <span>Number of comments: <%= @post.comments_counter || 0 %></span>
+  <span>Number of likes: <%= @post.likes_counter || 0 %></span>
+</div>
+
+<p>post description: <%= @post.text %></p>
+
+</div>
+
+<div class= "recents-comments">
+<% @post.recent_comments.each do |comment|%>
+  <li>Username : <%= comment.text %>
+  <% end %>
+</div>
+<section>

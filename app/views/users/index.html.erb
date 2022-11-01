@@ -1,1 +1,17 @@
-<h1>Here is a list of posts for a given user</h1>
+<h1>Here is a lists of a given user</h1>
+
+<section>
+  <% @users.each do |user| %>
+    <%= link_to user_path(user.id) do %>
+      <div class= "container">
+        <div class="user-img">
+          <img src="<%= user.photo %>">
+        </div>
+        <div class="details">
+          <h1 class= "user-head"><%= user.name %></h1>
+          <p class="user-para">Number of posts: <%= user.posts_counter || 0 %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</section>
