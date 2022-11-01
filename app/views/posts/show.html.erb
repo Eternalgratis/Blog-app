@@ -4,7 +4,10 @@
 <div>
 <h1><%= @post.title %></h1>
 <div>
-  
+  <span>Number of comments: <%= @post.comments_counter || 0 %></span>
+ 
+<% @post.recent_comments.each do |comment|%>
+  <li>Username : <%= comment.text %>
   <% end %>
 </div>
 <section>
