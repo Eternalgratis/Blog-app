@@ -17,4 +17,9 @@
   <li>Username : <%= comment.text %>
   <% end %>
 </div>
+<ul>
+<% @comments.each do |rec| %>
+<li><%= rec.author.name %> : <%= rec.text %></li>
+<% end %>
+</ul>
 <section>

@@ -1,0 +1,16 @@
+<%= form_with model: @new, method: :post, local: true do |f| %>
+<div>
+<%= f.label :Post_title, require: true %><br>
+<%= f.text_field :title %><br>
+</div>
+
+<div>
+<%= f.label :Enter_text, require: true %><br>
+<%= f.text_area :Text, rows: 10 %><br>
+</div>
+
+<div>
+<%= f.label :submit %><br>
+<%= f.submit :create_post %>
+</div>
+<% end %>

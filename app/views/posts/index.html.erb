@@ -21,5 +21,10 @@
       <span>Numbers of likes: <%= post.likes_counter || 0 %></span>
       </div>
         <% end %>
+        <ul>
+      <% @post.each do |rec| %>
+      <li><%= rec.author.name %> : <%= rec.text %></li>
+      <% end %>
+      </ul>
     <button>Pagination</button>
 </section>
