@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
     def current_user
-        @users.first
+        User.find(params[:user_id])
     end
 end

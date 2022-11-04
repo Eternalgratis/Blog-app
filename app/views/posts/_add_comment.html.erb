@@ -1,0 +1,9 @@
+<div>
+  <%= form_with url: "/users/#{@post.author_id}/posts/#{@post.id}/comments", scope: :comment do |format| %>
+    <div>
+        <%= format.label :Enter_Comment %><br>
+        <%= format.text_area :text, rows: 10, require: true %>
+        <%= format.submit "Comment" %>
+    </div>
+    <% end %>
+</div>
