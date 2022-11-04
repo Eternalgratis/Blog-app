@@ -13,8 +13,20 @@
 </div>
 
 <div class= "recents-comments">
+<div>
+        <%= form_with url: "/users/#{@post.author_id}/posts/#{@post.id}/likes", scope: :like do |f| %>
+        <%= f.submit "Like" %>
+        <% end %>
+</div>
+
 <% @post.recent_comments.each do |comment|%>
   <li>Username : <%= comment.text %>
   <% end %>
 </div>
+<ul>
+<% @comments.each do |rec| %>
+<li><%= rec.author.name %> : <%= rec.text %></li>
+<% end %>
+</ul>
+<%= render 'add_comment'%>
 <section>
