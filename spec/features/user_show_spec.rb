@@ -10,4 +10,8 @@ RSpec.describe 'users/show.html.erb', type: :view do
     expect(page).to have_content(@user.name)
   end
 
+  it 'I can see the number of post' do
+    expect(page).to have_content(@user.posts_counter)
+  end
+
 end
