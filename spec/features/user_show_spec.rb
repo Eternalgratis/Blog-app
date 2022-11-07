@@ -14,4 +14,8 @@ RSpec.describe 'users/show.html.erb', type: :view do
     expect(page).to have_content(@user.posts_counter)
   end
 
+  it 'I can the user bio' do
+    expect(page).to have_content(@user.bio)
+  end
+
 end
