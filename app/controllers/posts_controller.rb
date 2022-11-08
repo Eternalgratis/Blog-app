@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @post = Post.all
+    @post = Post.includes([:author]).where(author_id: params[:author_id])
   end
 
   def show
     @post = Post.find(params[:id])
-    @comments = @post.comments
+    @comments = @post.comments.includes([:author])
   end
 
   def new
@@ -24,5 +24,9 @@ class PostsController < ApplicationController
         end
       end
     end
+  end
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end
