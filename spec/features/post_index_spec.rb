@@ -24,7 +24,7 @@ RSpec.describe Post, type: :feature do
 
     it 'should see the username of all other users' do
       @user.each do |user|
-        expect(user.name).to have_content("Eternalgratis")
+        expect(user.name).to have_content('Eternalgratis')
       end
     end
 
