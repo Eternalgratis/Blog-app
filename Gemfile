@@ -54,6 +54,7 @@ group :development, :test do
   gem 'ffi'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
+  gem 'bullet'
 end
 
 group :development do
@@ -72,5 +73,4 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
-  gem 'bullet', group: 'development'
 end
