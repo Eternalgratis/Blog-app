@@ -1,3 +1,6 @@
+<% if current_user != nil %>
+  <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
+<% end %>
 <h1>Here is a lists of a given user</h1>
 
 <section>
