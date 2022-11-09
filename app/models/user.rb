@@ -15,5 +15,7 @@ class User < ApplicationRecord
     posts.order(created_at: :desc).limit(3)
   end
 
-
+  def default_params
+    self.posts_counter = 0
+  end
 end
