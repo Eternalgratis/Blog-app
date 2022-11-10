@@ -1,13 +1,14 @@
+<div class="container-fluid w-md-50 d-flex flex-column align-items-center mt-5 pb-5"></div>
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
+  <div class="field mt-3">
+    <%= f.label :email, class:'form-label' %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
+  <div class="field mt-3">
+    <%= f.label :password, class: 'form-label' %><br />
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
@@ -18,8 +19,8 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <div class="actions mt-3">
+    <%= f.submit "Log in", class: 'btn btn-sucess my-2 w-100' %>
   </div>
 <% end %>
 
